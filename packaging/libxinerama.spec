@@ -1,8 +1,8 @@
 
-Name:       libXinerama
+Name:       libxinerama
 Summary:    X.Org X11 libXinerama runtime library
 Version:    1.1.1
-Release:    1
+Release:    2.6
 Group:      System/Libraries
 License:    MIT/X11
 URL:        http://www.x.org
@@ -30,6 +30,7 @@ X.Org X11 libXinerama development package
 
 
 %prep
+export LDFLAGS+=" -Wl,--hash-style=both -Wl,--as-needed"
 %setup -q -n %{name}-%{version}
 
 
