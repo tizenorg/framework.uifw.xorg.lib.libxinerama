@@ -7,6 +7,7 @@ Group:      System/Libraries
 License:    MIT/X11
 URL:        http://www.x.org
 Source0:    http://xorg.freedesktop.org/archive/individual/lib/%{name}-%{version}.tar.gz
+Source1001: packaging/libxinerama.manifest 
 Requires(post):  /sbin/ldconfig
 Requires(postun):  /sbin/ldconfig
 BuildRequires:  pkgconfig(xproto)
@@ -35,6 +36,7 @@ export LDFLAGS+=" -Wl,--hash-style=both -Wl,--as-needed"
 
 
 %build
+cp %{SOURCE1001} .
 
 %reconfigure --disable-static
 
@@ -58,6 +60,7 @@ rm -rf %{buildroot}
 
 
 %files
+%manifest libxinerama.manifest
 %defattr(-,root,root,-)
 %doc COPYING
 %{_libdir}/libXinerama.so.1
@@ -65,6 +68,7 @@ rm -rf %{buildroot}
 
 
 %files devel
+%manifest libxinerama.manifest
 %defattr(-,root,root,-)
 %doc README ChangeLog
 %{_includedir}/X11/extensions/*.h
