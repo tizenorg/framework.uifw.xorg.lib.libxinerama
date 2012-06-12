@@ -3,7 +3,7 @@ Name:       libxinerama
 Summary:    X.Org X11 libXinerama runtime library
 Version:    1.1.1
 Release:    2.6
-Group:      System/Libraries
+Group:      Graphics/X Window System
 License:    MIT/X11
 URL:        http://www.x.org
 Source0:    http://xorg.freedesktop.org/archive/individual/lib/%{name}-%{version}.tar.gz
