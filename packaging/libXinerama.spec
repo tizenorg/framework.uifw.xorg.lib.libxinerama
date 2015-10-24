@@ -1,6 +1,6 @@
 Summary: X.Org X11 libXinerama runtime library
 Name: libXinerama
-Version: 1.1.2
+Version: 1.1.3
 Release: 1
 License: MIT
 Group: System Environment/Libraries
@@ -56,7 +56,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(-,root,root,-)
 /usr/share/license/%{name}
-%doc COPYING ChangeLog
+%doc COPYING
 %{_libdir}/libXinerama.so.1
 %{_libdir}/libXinerama.so.1.0.0
 
